@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    function func(word,letter){
+        let wordArr=word.split("");
+        for (let i=0; i<wordArr.length; i++){
+            for (let j=0; j<letter.length; j++){
+                if (wordArr[i]===letter[j]){
+                    wordArr.splice(i, 1);
+                    i--
+                }
+            }
+        }
+        return wordArr.join("")
+    }
+    let result=func("hello world", ['l','d']);
+    console.log(result)
+    // function deleteSymbol(text,symbol) {
+    //     let textArr = text.split("");
+    //     for(let i = 0; i < textArr.length; i++) {
+    //         for(let j = 0; j < symbol.length; j++) {
+    //             if (textArr[i] === symbol[j]) {
+    //                 textArr.splice(i, 1);
+    //                 i--
+    //             }
+    //         }
+    //     }
+    //     return textArr.join("");
+    // }
+    // let functionResult = deleteSymbol("hello world",['l','d']);
+    // console.log(functionResult);
+</script>
+<body>
+</body>
+</html>
